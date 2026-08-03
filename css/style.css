@@ -14,9 +14,43 @@ div#carousel {
     height: 46vh;
     width: 100%;
      max-height: 628px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    align-items: center;
+
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
+    
+}
+
+div#carousel button{
+    background: #1351d8;
+    color: #fff;
+    border: 0px;
+    border-radius: 8px;
+
+    padding: 12px 18px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+
+    height: auto;
+
+    transition: background 0.3s ease-in-out;
+}
+
+div#carousel button:hover {
+    background: #1b357e;
+}
+
+div#carousel img {
+    max-height: 430px;
+    max-width: 100%;
+
 }
 
 div#carousel-title a {

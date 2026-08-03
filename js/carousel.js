@@ -66,6 +66,7 @@ class Carousel {
 
         //escreve o conteudo do carousel no html
         ref.innerHTML = `<a href="${currentItem.url}" target="_blank"><img src="${currentItem.image}" alt="${currentItem.title}"></a>`;
+        ref.innerHTML += `<a href="${currentItem.url}" target="_blank"><h2>${currentItem.title}</h2></a>`;
     }
 
     static ResetTimer(){
