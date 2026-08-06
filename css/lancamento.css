@@ -72,7 +72,7 @@ div#compare {
     width: 50vw;
     max-width: 800px;
     min-width: 400px;
-    height: 80vh;
+    height: auto;
     max-height: 700px;
     min-height: 350px;
     background: #fff;
@@ -82,4 +82,12 @@ div#compare {
     padding: 10px;
     -webkit-box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
     box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
+}
+
+div#compare img{
+    
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

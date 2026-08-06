@@ -85,5 +85,8 @@ function UpdateCompareTable() {
         document.getElementById(`compare_capacidadecarga_${i}`).innerHTML = `${car.capacidadeCarga} kg`;
         document.getElementById(`compare_motor_${i}`).innerHTML = car.motor;
         document.getElementById(`compare_potencia_${i}`).innerHTML = car.potencia;    
+        document.getElementById(`compare_volumecacamba_${i}`).innerHTML = `${car.volumeCacamba} L`;
+        document.getElementById(`compare_roda_${i}`).innerHTML = car.roda;
+        document.getElementById(`compare_preco_${i}`).innerHTML = `R$ ${car.preco.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 }
 }
