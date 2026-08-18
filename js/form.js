@@ -27,29 +27,34 @@ function Post(form) {
   
 }
 
-function Enviar() {
-
+function Enviar(el) {
     const button = document.getElementById("enviar");
     const form = document.getElementById("form");
+    const checkbox = document.getElementById("termos");
 
     if (button && form) {
         button.addEventListener("click", function (event) {
-            // essa função previne o comportamento padrão do botão de envio do formulário, que é recarregar a página
+            // Previne o recarregamento da página
             event.preventDefault();
 
-            // chama a função Post passando o formulário como argumento
+            // 1. Valida se o checkbox existe e se está marcado
+            if (!checkbox || !checkbox.checked) {
+                alert("Por favor, aceite os termos antes de prosseguir.");
+                return;
+            }
+
+            // 2. Chama a função Post passando o formulário
             const novoContato = Post(form);
 
-        if (novoContato && novoContato.nome.trim() !== "") {
+            // 3. Valida os dados do contato retornado
+            if (novoContato && novoContato.nome && novoContato.nome.trim() !== "") {
                 alert(`Obrigado sr(a) ${novoContato.nome}, os seus dados foram encaminhados com sucesso`);
                 console.log(novoContato);
             } else {
                 alert("Por favor, preencha o campo de nome.");
             }
-
-   
-    });
-}
+        });
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
