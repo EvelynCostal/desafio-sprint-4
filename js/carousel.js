@@ -39,6 +39,7 @@ class Carousel {
                     prevBtn.addEventListener("click", function(){
                         Carousel.Prev();
                     });
+                    
 
 
                 // chama a função de navegação do carousel quando o botão next é clicado
